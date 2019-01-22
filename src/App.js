@@ -1,24 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
+  authorSubmit = e => {
+    e.preventDefault();
+    const author = e.target.elements.author.value;
+    console.log(author);
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h2>Book Collection</h2>
+
+          <form onSubmit={this.authorSubmit}>
+            <div className="row justify-content-lg-center" id="data-entry">
+              <input
+                id="author"
+                class="form-control form-control-lg col-lg-6"
+                type="text"
+                name="author"
+                placeholder="Enter Author"
+              />
+            </div>
+            <button>Submit</button>
+          </form>
         </header>
       </div>
     );
