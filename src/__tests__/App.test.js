@@ -12,9 +12,3 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
-
-it('prints out the book titles from the api', () => {
-  const wrapper = mount(<App />)
-
-  console.log(wrapper.debug())
-})
