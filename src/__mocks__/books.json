@@ -1,0 +1,79 @@
+{"data":
+	{
+	"kind": "books#volumes",
+	"totalItems": 1080,
+	"items": [
+	{
+			"kind": "books#volume",
+			"id": "b8DHGwAACAAJ",
+			"etag": "1UYAFbiGzgU",
+			"selfLink": "https://www.googleapis.com/books/v1/volumes/b8DHGwAACAAJ",
+			"volumeInfo": {
+				"title": "The Sword of Shannara Trilogy",
+				"authors": [
+					"Terry Brooks"
+				],
+				"publisher": "Orbit Books",
+				"publishedDate": "2004",
+				"description": "THE SWORD OF SHANNARA: Long ago, the world of Shea Ohmsford was torn apart by war. But the half-human, half-elfin, Shea now lives in peace - until the forbidding figure of Allanon appears, to reveal that the long dead Warlock Lord lives again ... THE ELFSTONES OF SHANNARA: Ancient evil threatens the Elves and the Races of Man. For the Ellcrys, the tree of long-lost Elven magic, is dying - loosing the spell of Forbidding that locks the hordes of Demons away from Earth. Only one source has the power to stop it: the Elfstones of Shannara. THE WISHSONG OF SHANNARA: Evil stalks the Four Lands as the Ildatch, immemorial book of evil spells, has stirred to eldritch life. Once again Allanon, ancient Druid Protector of the Races, must seek the help of a descendant of Jerle Shannara.",
+				"industryIdentifiers": [
+					{
+						"type": "ISBN_10",
+						"identifier": "1841492876"
+					},
+					{
+						"type": "ISBN_13",
+						"identifier": "9781841492872"
+					}
+				],
+				"readingModes": {
+					"text": false,
+					"image": false
+				},
+				"pageCount": 1191,
+				"printType": "BOOK",
+				"categories": [
+					"Fantasy fiction, American"
+				],
+				"averageRating": 3.5,
+				"ratingsCount": 9,
+				"maturityRating": "NOT_MATURE",
+				"allowAnonLogging": false,
+				"contentVersion": "preview-1.0.0",
+				"imageLinks": {
+					"smallThumbnail": "http://books.google.com/books/content?id=b8DHGwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+					"thumbnail": "http://books.google.com/books/content?id=b8DHGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+				},
+				"language": "en",
+				"previewLink": "http://books.google.com/books?id=b8DHGwAACAAJ&dq=sword%2Bof%2Bshannara&hl=&cd=2&source=gbs_api",
+				"infoLink": "http://books.google.com/books?id=b8DHGwAACAAJ&dq=sword%2Bof%2Bshannara&hl=&source=gbs_api",
+				"canonicalVolumeLink": "https://books.google.com/books/about/The_Sword_of_Shannara_Trilogy.html?hl=&id=b8DHGwAACAAJ"
+			},
+			"saleInfo": {
+				"country": "US",
+				"saleability": "NOT_FOR_SALE",
+				"isEbook": false
+			},
+			"accessInfo": {
+				"country": "US",
+				"viewability": "NO_PAGES",
+				"embeddable": false,
+				"publicDomain": false,
+				"textToSpeechPermission": "ALLOWED",
+				"epub": {
+					"isAvailable": false
+				},
+				"pdf": {
+					"isAvailable": false
+				},
+				"webReaderLink": "http://play.google.com/books/reader?id=b8DHGwAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+				"accessViewStatus": "NONE",
+				"quoteSharingAllowed": false
+			},
+			"searchInfo": {
+				"textSnippet": "Only one source has the power to stop it: the Elfstones of Shannara. THE WISHSONG OF SHANNARA: Evil stalks the Four Lands as the Ildatch, immemorial book of evil spells, has stirred to eldritch life."
+			}
+		}
+		]
+	}
+	}

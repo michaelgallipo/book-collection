@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
+import Books from "./Books"
 
 class App extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class App extends Component {
   }
 
   authorSubmit = e => {
+    console.log("we clicked Submit")
     e.preventDefault();
     const author = e.target.elements.author.value;
     console.log(author);
@@ -19,7 +21,10 @@ class App extends Component {
     axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}`)
       .then(response => {
         console.log(response.data)
-        this.setState({books: response.data.items})
+        const books = response.data.items.map((book) => {
+          return {title: book.volumeInfo.title, author: book.volumeInfo.authors[0], imageUrl: "hi"}
+        })
+        this.setState({books: books})
       })
       .catch((error) => {
         console.log(error)
@@ -44,8 +49,10 @@ class App extends Component {
             </div>
             <button>Submit</button>
           </form>
-          {this.state.books.map(book => <h3>{book.volumeInfo.title}</h3>)}
         </header>
+        <Books 
+        books={this.state.books}
+        />
       </div>
     );
   }
