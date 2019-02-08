@@ -40,3 +40,11 @@ it("renders Books with the correct props", async () => {
 		"http://books.google.com/books/content?id=b8DHGwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
 	);
 });
+
+// describe("error handling", () => {
+// 	describe("when there are no imageLinks", () => {
+// 		it("passes null for imageUrl to books", () => {
+// 			const wrapper = mount(<App />);
+// 		});
+// 	});
+//});

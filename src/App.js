@@ -10,7 +10,6 @@ class App extends Component {
   }
 
   authorSubmit = e => {
-    console.log("we clicked Submit");
     e.preventDefault();
     const author = e.target.elements.author.value;
     console.log(author);
@@ -21,12 +20,14 @@ class App extends Component {
     axios
       .get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}`)
       .then(response => {
-        console.log(response.data);
         const books = response.data.items.map(book => {
+          const volumeInfo = book.volumeInfo;
           return {
-            title: book.volumeInfo.title,
-            author: book.volumeInfo.authors[0],
-            imageUrl: book.volumeInfo.imageLinks.smallThumbnail
+            title: volumeInfo.title,
+            author: volumeInfo.authors[0],
+            imageUrl: volumeInfo.imageLinks
+              ? volumeInfo.imageLinks.smallThumbnail
+              : null
           };
         });
         this.setState({ books: books });
