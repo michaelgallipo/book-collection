@@ -1,35 +1,40 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
-import Books from "./Books"
+import Books from "./Books";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {books: []}
+    this.state = { books: [] };
   }
 
   authorSubmit = e => {
-    console.log("we clicked Submit")
+    console.log("we clicked Submit");
     e.preventDefault();
     const author = e.target.elements.author.value;
     console.log(author);
     this.getBookData(author);
   };
 
-  getBookData = (author) => {
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}`)
+  getBookData = author => {
+    axios
+      .get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}`)
       .then(response => {
-        console.log(response.data)
-        const books = response.data.items.map((book) => {
-          return {title: book.volumeInfo.title, author: book.volumeInfo.authors[0], imageUrl: "hi"}
-        })
-        this.setState({books: books})
+        console.log(response.data);
+        const books = response.data.items.map(book => {
+          return {
+            title: book.volumeInfo.title,
+            author: book.volumeInfo.authors[0],
+            imageUrl: book.volumeInfo.imageLinks.smallThumbnail
+          };
+        });
+        this.setState({ books: books });
       })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   render() {
     return (
@@ -50,9 +55,7 @@ class App extends Component {
             <button>Submit</button>
           </form>
         </header>
-        <Books 
-        books={this.state.books}
-        />
+        <Books books={this.state.books} />
       </div>
     );
   }
