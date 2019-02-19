@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 const Books = props => {
   return (
@@ -7,7 +12,8 @@ const Books = props => {
         ? props.books.map((book, index) => {
             return (
               <div key={index}>
-                <img src={book.imageUrl} alt="No Image Found" />
+                <Link to={{ pathname: "/book", book }}><img src={book.imageUrl} alt="No Image Found"/>
+                </Link>
                 {book.title}, by {book.author}
               </div>
             );

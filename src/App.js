@@ -27,7 +27,11 @@ class App extends Component {
             author: volumeInfo.authors[0],
             imageUrl: volumeInfo.imageLinks
               ? volumeInfo.imageLinks.smallThumbnail
-              : null
+              : null,
+            description: volumeInfo.description,
+            publishedDate: volumeInfo.publishedDate,
+            pageCount: volumeInfo.pageCount,
+            categories: volumeInfo.categories
           };
         });
         this.setState({ books: books });
