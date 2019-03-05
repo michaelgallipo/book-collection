@@ -14,7 +14,7 @@ const BookInfo = props => {
             <Col sm={2}>
               <img src={imageUrl} alt="No Image Found" />
             </Col>
-            <Col sm={10}>
+            <Col sm={{ span: 9, offset: 1 }}>
               <h4>
                 {title}, by {author}
               </h4>

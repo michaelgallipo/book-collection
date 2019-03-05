@@ -53,7 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h2>Book Collection</h2>
+          <h1>Book Collection</h1>
 
           <Form onSubmit={this.authorSubmit}>
             <Row className="justify-content-lg-center" id="data-entry">
@@ -62,7 +62,6 @@ class App extends Component {
                 type="text"
                 name="author"
                 placeholder="Enter Author"
-                
               />
             </Row>
             <button style={{ marginTop: "5px" }}>Submit</button>
