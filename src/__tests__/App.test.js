@@ -1,22 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "../App";
-import Enzyme from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
 import Books from "../Books";
-
-Enzyme.configure({ adapter: new Adapter() });
 import { mount } from "enzyme";
+import configureStore from "redux-mock-store";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
+
+const mockStore = configureStore();
+const store = mockStore();
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");
-	ReactDOM.render(<App />, div);
+	ReactDOM.render(
+		<Router>
+			<Provider store={store}>
+				<App />
+			</Provider>
+		</Router>,
+		div
+	);
 	ReactDOM.unmountComponentAtNode(div);
 });
 
 it("renders a list of books", async () => {
 	const flushPromises = () => new Promise(resolve => setImmediate(resolve));
-	const wrapper = mount(<App />);
+	const wrapper = mount(
+		<Router>
+			<Provider store={store}>
+				{" "}
+				<App />{" "}
+			</Provider>
+		</Router>
+	);
 
 	wrapper.find("form").simulate("submit");
 	await flushPromises();
@@ -26,7 +42,14 @@ it("renders a list of books", async () => {
 
 it("renders Books with the correct props", async () => {
 	const flushPromises = () => new Promise(resolve => setImmediate(resolve));
-	const wrapper = mount(<App />);
+	const wrapper = mount(
+		<Router>
+			<Provider store={store}>
+				{" "}
+				<App />{" "}
+			</Provider>
+		</Router>
+	);
 
 	wrapper.find("form").simulate("submit");
 	await flushPromises();
