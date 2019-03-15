@@ -35,12 +35,10 @@ const BookInfo = props => {
 							<h6>{pageCount} pages</h6>
 							<h6>{publishedDate}</h6>
 							<br />
-							<button
-								onClick={() => {
-									window.open("https://www.google.com");
-								}}
-							>
-								Click to go to Google Books
+							<button>
+								<a href={googleLink} target="_blank">
+									Click to go to Google Books
+								</a>
 							</button>
 						</Col>
 					</>
