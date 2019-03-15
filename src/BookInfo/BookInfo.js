@@ -15,13 +15,17 @@ const BookInfo = props => {
 		googleLink
 	} = book;
 
+	// const openGoogle = e => {
+	// 	window.open(e.googleLink);
+	// };
+
 	return (
 		<Container style={{ marginTop: "25px" }}>
 			<Row>
 				{book ? (
 					<>
 						<Col sm={2}>
-							<img src={imageUrl} alt="No Image Found" />
+							<img src={imageUrl} alt="No Cover Found" />
 						</Col>
 						<Col sm={{ span: 9, offset: 1 }}>
 							<h4>
@@ -31,7 +35,11 @@ const BookInfo = props => {
 							<h6>{pageCount} pages</h6>
 							<h6>{publishedDate}</h6>
 							<br />
-							<button onClick={openGoogle(googleLink)}>
+							<button
+								onClick={() => {
+									window.open("https://www.google.com");
+								}}
+							>
 								Click to go to Google Books
 							</button>
 						</Col>
@@ -42,9 +50,6 @@ const BookInfo = props => {
 			</Row>
 		</Container>
 	);
-};
-var openGoogle = e => {
-	window.open(e.googleLink);
 };
 
 export default BookInfo;
