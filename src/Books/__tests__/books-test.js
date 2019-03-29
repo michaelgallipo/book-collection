@@ -82,14 +82,6 @@ describe("<Books />", () => {
 				</Router>
 			);
 		});
-		it("no books found", () => {
-			const wrapper = mount(
-				<Router>
-					<Books books={[]} />
-				</Router>
-			);
-
-			expect(wrapper.text()).toEqual(expect.stringContaining("no books found"));
-		});
+		
 	});
 });

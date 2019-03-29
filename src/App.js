@@ -10,7 +10,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { books: [] };
-    console.log(props.searchTerm);
 
     if (props.searchTerm !== undefined) {
       this.getBookData(props.searchTerm);
