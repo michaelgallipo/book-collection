@@ -10,7 +10,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const mockStore = configureStore();
 const store = mockStore();
 
-it.only("renders without crashing", () => {
+it("renders without crashing", () => {
   const div = document.createElement("div");
   ReactDOM.render(
     <Router>
