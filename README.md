@@ -1,4 +1,4 @@
-App Description: This application implements the Google Books API to help you search for a list of books based on an author. The books are displayed as images that you can click on with the goal of providing a friendly interface for users. The app leverages React's state capabilities to help you easily navigate back to the original list of books if you click on one, until you search for another author. 
+App Description: This application implements the Google Books API to help you search for a list of books based on an author. The books are displayed as images that you can click on with the goal of providing a friendly interface for users. The app leverages React's state capabilities to help you easily navigate back to the original list of books if you click on one, until you search for books by another author. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
